@@ -16,7 +16,7 @@ const Navbar = async () => {
         </Link>
 
         {/* Navigation Links */}
-        <div className=" hidden md:flex space-x-4">
+        <div className="  md:flex space-x-4">
           <Link
             href="/"
             className="btn btn-outline btn-primary rounded-md px-4 py-2"

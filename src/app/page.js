@@ -11,6 +11,11 @@ const Home = async () => {
       <div className="">
         <FeaturedPosts posts={posts} />
       </div>
+      <Link href="/allBlogs">
+        <button className="btn btn-primary px-4 py-2 rounded-md">
+          See all post
+        </button>
+      </Link>
     </div>
   );
 };

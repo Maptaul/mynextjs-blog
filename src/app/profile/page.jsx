@@ -1,4 +1,5 @@
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+import { redirect } from "next/navigation";
 
 export default async function ProfilePage() {
   const { getUser } = getKindeServerSession();
@@ -6,18 +7,7 @@ export default async function ProfilePage() {
 
   // Handle unauthenticated users
   if (!user) {
-    return (
-      <div className="container mx-auto py-10">
-        <h1 className="text-4xl font-bold mb-4">Unauthorized</h1>
-        <p className="text-lg">You need to log in to view this page.</p>
-        <a
-          href="/api/auth/login"
-          className="btn btn-primary mt-4 px-4 py-2 rounded-md"
-        >
-          Log In
-        </a>
-      </div>
-    );
+    redirect("/api/auth/login");
   }
 
   // Render profile page for authenticated users

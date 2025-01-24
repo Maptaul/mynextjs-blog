@@ -24,6 +24,12 @@ const Navbar = async () => {
             Home
           </Link>
           <Link
+            href="/allBlogs"
+            className="btn btn-outline btn-primary rounded-md px-4 py-2"
+          >
+            All Blogs
+          </Link>
+          <Link
             href="/profile"
             className="btn btn-outline btn-primary rounded-md px-4 py-2"
           >

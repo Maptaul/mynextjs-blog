@@ -5,7 +5,7 @@ import Link from "next/link";
 const PostCard = ({ id, title, body }) => {
   return (
     <>
-      <div className="card card-compact bg-base-100 w-96 h-72 shadow-xl">
+      <div className="card card-compact bg-amber-50 rounded-md w-96 h-72 shadow-xl">
         <div className="card-body  p-6 text-justify">
           <p className="mb-5">
             <strong>Title:</strong> {title}

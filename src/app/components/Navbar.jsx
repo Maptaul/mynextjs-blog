@@ -42,6 +42,7 @@ const Navbar = async () => {
           {user ? (
             <>
               <Link
+                prefetch={false}
                 href="/api/auth/logout"
                 className="btn btn-secondary rounded-md px-4 py-2"
               >

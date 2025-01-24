@@ -1,12 +1,21 @@
-
+"use client";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const Navbar = async () => {
-  const { getUser } = getKindeServerSession();
-  const user = await getUser();
+const Navbar = () => {
+  const [user, setUser] = useState(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const fetchUser = async () => {
+      const { getUser } = getKindeServerSession();
+      const userData = await getUser();
+      setUser(userData);
+    };
+
+    fetchUser();
+  }, []);
 
   return (
     <div className="bg-gray-800 text-gray-200 py-4">
